@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="clickApp">
+<head>
+  <title>ng-click Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="clickCtrl">
+  <button ng-click="sayHello()">Click Me</button>
+  <p>{{ result }}</p>
+
+  <script>
+    var app = angular.module('clickApp', []);
+    app.controller('clickCtrl', function($scope) {
+      $scope.sayHello = function() {
+        $scope.result = "You clicked the button!";
+      };
+    });
+  </script>
+</body>
+</html>
